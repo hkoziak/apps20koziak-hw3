@@ -79,6 +79,11 @@ public class SmartArrayApp {
             }
         };
 
+        Object[] antry = new DistinctDecorator(
+                new BaseArray(students)).toArray();
+        String[] a = Arrays.copyOf(antry, antry.length, String[].class);
+        System.out.println(Arrays.toString(a));
+
         Object[] stArray =
                 new MapDecorator(
                     new SortDecorator(
