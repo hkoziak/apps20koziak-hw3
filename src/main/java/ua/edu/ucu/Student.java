@@ -16,7 +16,7 @@ class Student {
     }
 
     public double getGPA() {
-        return GPA;
+        return gpa;
     }
 
     public int getYear() {
@@ -34,7 +34,7 @@ class Student {
     @Override
     public String toString() {
         return "Student{name=" + name + ", surname=" + surname +
-                ", " + "GPA=" + GPA + ", year=" + year + '}';
+                ", " + "GPA=" + gpa + ", year=" + year + '}';
     }
 
     @Override
