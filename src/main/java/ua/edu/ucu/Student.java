@@ -42,8 +42,8 @@ class Student {
         if (!(obj instanceof Student)) {
             return false;
         }
-        final double maxDiff = 0.00001;
-        return Math.abs(this.gpa - ((Student) obj).getGPA()) < maxDiff
+        final double MAXDIFF = 0.00001;
+        return Math.abs(this.gpa - ((Student) obj).getGPA()) < MAXDIFF
                     && this.year == ((Student) obj).getYear()
                     && this.name.equals(((Student) obj).getName())
                     && this.surname.equals(((Student) obj).getSurname());

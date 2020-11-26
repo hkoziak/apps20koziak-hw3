@@ -10,18 +10,18 @@ import static org.junit.Assert.*;
 public class SmartArrayAppTest {
 
     @Test
-    public void testFilterPositiveIntegersSortAndMultiplyBy2() {
+    public void testFilterPositiveIntegersSortAndMultiplyByTwo() {
         Integer[] integers = {-1, 2, 0, 1, -5, 3};
         
         Integer[] res = 
-                SmartArrayApp.filterPositiveIntegersSortAndMultiplyBy2(integers);
+                SmartArrayApp.filterPositiveIntegersSortAndMultiplyByTwo(integers);
         Integer[] expectedRes = {2, 4, 6};
         
         assertArrayEquals(expectedRes, res);        
     }
 
     @Test
-    public void testFindDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname() {
+    public void testFindDistinctStudentNamesFromSecondYearWithGPAgtFourAndOrderedBySurname() {
         Student[] students = {
             new Student("Ivar", "Grimstad", 3.9, 2),
             new Student("Ittai", "Zeidman", 4.5, 1),
@@ -32,7 +32,7 @@ public class SmartArrayAppTest {
             new Student("Ittai", "Zeidman", 4.5, 1),
             new Student("Burr", "Sutter", 4.2, 2)};
         String[] studentNames = 
-                SmartArrayApp.findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(students);
+                SmartArrayApp.findDistinctStudentNamesFromSecondYearWithGPAgtFourAndOrderedBySurname(students);
         String[] expectedStudentNames = {"Borek Tomasz", "Kranga Antons", "Sutter Burr"};
 
         assertArrayEquals(expectedStudentNames, studentNames);
