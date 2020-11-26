@@ -91,7 +91,7 @@ public class SmartArrayApp {
         //Object[] result = studentSmartArray.toArray();
         //return Arrays.copyOf(result, result.length, String[].class);
         String[] result = Arrays.copyOf(stArray, stArray.length, String[].class);
-        System.out.println(result);
+        System.out.println(Arrays.toString(result));
         return result;
     }
 }
