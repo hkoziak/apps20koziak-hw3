@@ -13,8 +13,8 @@ import ua.edu.ucu.smartarr.DistinctDecorator;
 
 public class SmartArrayApp {
 
-    public static Integer[]
-            filterPositiveIntegersSortAndMultiplyByTwo(Integer[] integers) {
+    public static Object[]
+            filterPositiveIntegersSortAndMultiplyByTwo(Object[] integers) {
                 
         MyPredicate pr = new MyPredicate() {
             @Override
@@ -55,12 +55,12 @@ public class SmartArrayApp {
     }
 
     public static String[]
-            findDistinctStudentNamesFromSecondYearWithGPAgtFourAndOrderedBySurname(
+            findDistStudentNamesFromSecondYearWithGPAgtFourAndOrderedBySurname(
                     Student[] students) {
         final int YEAR = 2;
         final int GPAPR = 4;
 
-        MyPredicate Year2AndGpa4 = new MyPredicate() {
+        MyPredicate YearTwoAndGpaFour = new MyPredicate() {
             @Override
             public boolean test(Object st) {
                 return ((Student) st).getYear() == YEAR
@@ -90,7 +90,7 @@ public class SmartArrayApp {
                             new FilterDecorator(
                                     new DistinctDecorator(
                                             new BaseArray(students)),
-                                    Year2AndGpa4), surnames), fullName);
+                                    YearTwoAndGpaFour), surnames), fullName);
 
         // Hint: to convert Object[] to String[] - use the following code
         //Object[] result = studentSmartArray.toArray();

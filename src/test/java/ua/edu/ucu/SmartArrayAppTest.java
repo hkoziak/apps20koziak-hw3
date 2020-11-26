@@ -11,11 +11,11 @@ public class SmartArrayAppTest {
 
     @Test
     public void testFilterPositiveIntegersSortAndMultiplyByTwo() {
-        Integer[] integers = {-1, 2, 0, 1, -5, 3};
+        Object[] integers = {-1, 2, 0, 1, -5, 3};
         
-        Integer[] res = 
+        Object[] res =
                 SmartArrayApp.filterPositiveIntegersSortAndMultiplyByTwo(integers);
-        Integer[] expectedRes = {2, 4, 6};
+        Object[] expectedRes = {2, 4, 6};
         
         assertArrayEquals(expectedRes, res);        
     }
@@ -32,7 +32,7 @@ public class SmartArrayAppTest {
             new Student("Ittai", "Zeidman", 4.5, 1),
             new Student("Burr", "Sutter", 4.2, 2)};
         String[] studentNames = 
-                SmartArrayApp.findDistinctStudentNamesFromSecondYearWithGPAgtFourAndOrderedBySurname(students);
+                SmartArrayApp.findDistStudentNamesFromSecondYearWithGPAgtFourAndOrderedBySurname(students);
         String[] expectedStudentNames = {"Borek Tomasz", "Kranga Antons", "Sutter Burr"};
 
         assertArrayEquals(expectedStudentNames, studentNames);
