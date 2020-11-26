@@ -15,7 +15,7 @@ public class DistinctDecorator extends SmartArrayDecorator  {
         for (int i = 0; i < oldArray.length; i++) {
             boolean duplicate = false;
             for (int j = 0; j < i; j++) {
-                if (oldArray[i].equals(oldArray[j])) {
+                if (oldArray[i] == oldArray[j]) {
                     duplicate = true;
                     break;
                 }
