@@ -3,13 +3,13 @@ package ua.edu.ucu;
 
 class Student {
 
-    private double GPA;
+    private double gpa;
     private int year;
     private String name;
     private String surname;
 
-    public Student(String name, String surname, double GPA, int year) {
-        this.GPA = GPA;
+    public Student(String name, String surname, double gpaNum, int year) {
+        this.gpa = gpaNum;
         this.year = year;
         this.name = name;
         this.surname = surname;
@@ -33,7 +33,8 @@ class Student {
 
     @Override
     public String toString() {
-        return "Student{name=" + name + ", surname=" + surname + ", " + "GPA=" + GPA + ", year=" + year + '}';
+        return "Student{name=" + name + ", surname=" + surname +
+                ", " + "GPA=" + GPA + ", year=" + year + '}';
     }
 
     @Override
@@ -41,7 +42,8 @@ class Student {
         if (!(obj instanceof Student)) {
             return false;
         }
-        return Math.abs(this.GPA - ((Student) obj).getGPA()) < 0.00001
+        double maxDiff = 0.00001;
+        return Math.abs(this.gpa - ((Student) obj).getGPA()) < maxDiff
                     && this.year == ((Student) obj).getYear()
                     && this.name.equals(((Student) obj).getName())
                     && this.surname.equals(((Student) obj).getSurname());

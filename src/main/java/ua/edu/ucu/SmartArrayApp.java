@@ -50,8 +50,8 @@ public class SmartArrayApp {
     }
 
     public static String[]
-            findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname
-            (Student[] students) {
+            findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(
+                    Student[] students) {
         final int year = 2;
         final int gpaPred = 4;
 
@@ -74,8 +74,8 @@ public class SmartArrayApp {
         MyFunction fullName = new MyFunction() {
             @Override
             public Object apply(Object st) {
-                return ((Student) st).getSurname() +
-                        " " +  ((Student) st).getName();
+                return ((Student) st).getSurname()
+                        + " " +  ((Student) st).getName();
             }
         };
 

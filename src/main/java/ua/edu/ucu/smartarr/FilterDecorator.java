@@ -27,7 +27,7 @@ public class FilterDecorator extends SmartArrayDecorator {
 
     @Override
     public Object[] toArray() {
-        return filterByPred(this.smartArray.toArray());
+        return filterByPred(this.getSmartArray().toArray());
     }
 
     @Override

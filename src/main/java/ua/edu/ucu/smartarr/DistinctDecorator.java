@@ -30,7 +30,7 @@ public class DistinctDecorator extends SmartArrayDecorator {
 
     @Override
     public Object[] toArray() {
-        return deleteRepeats(this.smartArray.toArray());
+        return deleteRepeats(this.getSmartArray().toArray());
     }
 
     @Override

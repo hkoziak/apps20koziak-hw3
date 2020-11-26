@@ -13,7 +13,7 @@ public class MapDecorator extends SmartArrayDecorator {
     }
 
     private Object[] applyMapFunc() {
-        Object[] newArray = this.smartArray.toArray();
+        Object[] newArray = this.getSmartArray().toArray();
         for (int i = 0; i < newArray.length; i++) {
             newArray[i] = this.mapFunc.apply(newArray[i]);
         }
