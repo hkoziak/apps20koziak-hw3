@@ -33,8 +33,8 @@ class Student {
 
     @Override
     public String toString() {
-        return "Student{name=" + name + ", surname=" + surname +
-                ", " + "GPA=" + gpa + ", year=" + year + '}';
+        return "Student{name=" + name + ", surname=" + surname
+                + ", " + "GPA=" + gpa + ", year=" + year + '}';
     }
 
     @Override
@@ -42,7 +42,7 @@ class Student {
         if (!(obj instanceof Student)) {
             return false;
         }
-        double maxDiff = 0.00001;
+        final double maxDiff = 0.00001;
         return Math.abs(this.gpa - ((Student) obj).getGPA()) < maxDiff
                     && this.year == ((Student) obj).getYear()
                     && this.name.equals(((Student) obj).getName())
