@@ -25,8 +25,8 @@ public class SmartArrayApp {
 
         MyComparator cmp = new MyComparator() {
             @Override
-            public int compare(Object o1, Object o2) {
-                return ((Integer) o1) - ((Integer) o2);
+            public int compare(Object firstObj, Object secObj) {
+                return ((Integer) firstObj) - ((Integer) secObj);
             }
         };
 
@@ -60,7 +60,7 @@ public class SmartArrayApp {
         final int YEAR = 2;
         final int GPAPR = 4;
 
-        MyPredicate YearTwoAndGpaFour = new MyPredicate() {
+        MyPredicate yearTwoAndGpaFour = new MyPredicate() {
             @Override
             public boolean test(Object st) {
                 return ((Student) st).getYear() == YEAR
@@ -90,7 +90,7 @@ public class SmartArrayApp {
                             new FilterDecorator(
                                     new DistinctDecorator(
                                             new BaseArray(students)),
-                                    YearTwoAndGpaFour), surnames), fullName);
+                                    yearTwoAndGpaFour), surnames), fullName);
 
         // Hint: to convert Object[] to String[] - use the following code
         //Object[] result = studentSmartArray.toArray();
