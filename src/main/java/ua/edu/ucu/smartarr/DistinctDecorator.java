@@ -40,6 +40,6 @@ public class DistinctDecorator extends SmartArrayDecorator  {
     @Override
     public int size() {
         Object[] filteredArray = this.toArray();
-        return fileterdArray.length;
+        return filteredArray.length;
     }
 }
