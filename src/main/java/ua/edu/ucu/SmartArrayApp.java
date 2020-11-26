@@ -79,23 +79,18 @@ public class SmartArrayApp {
             }
         };
 
-        Object[] antry = new DistinctDecorator(
-                new BaseArray(students)).toArray();
-        System.out.println(Arrays.toString(antry));
-
-        Object[] stArray =
+        SmartArray stArray =
                 new MapDecorator(
                     new SortDecorator(
                             new FilterDecorator(
                                     new DistinctDecorator(
                                             new BaseArray(students)),
-                                    Year2AndGpa4), surnames), fullName).toArray();
+                                    Year2AndGpa4), surnames), fullName);
 
         // Hint: to convert Object[] to String[] - use the following code
         //Object[] result = studentSmartArray.toArray();
         //return Arrays.copyOf(result, result.length, String[].class);
-        String[] result = Arrays.copyOf(stArray, stArray.length, String[].class);
-        System.out.println(Arrays.toString(result));
-        return result;
+        Object[] result = stArray.toArray();
+        return Arrays.copyOf(result, result.length, String[].class);
     }
 }
