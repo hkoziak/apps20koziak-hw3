@@ -5,7 +5,7 @@ import ua.edu.ucu.functions.MyPredicate;
 // removes it if it doesn't satisfy MyPredicate
 public class FilterDecorator extends SmartArrayDecorator {
 
-    private MyPredicate predicate;
+    private final MyPredicate predicate;
 
     public FilterDecorator(SmartArray smartArray, MyPredicate predicate) {
         super(smartArray);
