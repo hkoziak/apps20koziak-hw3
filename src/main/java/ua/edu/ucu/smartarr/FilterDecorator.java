@@ -1,5 +1,6 @@
 package ua.edu.ucu.smartarr;
 import ua.edu.ucu.functions.MyPredicate;
+import java.util.Arrays;
 
 // Tests every element and
 // removes it if it doesn't satisfy MyPredicate
@@ -21,9 +22,7 @@ public class FilterDecorator extends SmartArrayDecorator {
                 idx++;
             }
         }
-        Object[] cleanArr = new Object[idx];
-        System.arraycopy(newArray, 0, cleanArr, 0, idx);
-        return cleanArr;
+        return Arrays.copyOf(newArray, idx);
     }
 
     @Override

@@ -1,4 +1,5 @@
 package ua.edu.ucu.smartarr;
+import java.util.Arrays;
 
 // Remove duplicates from SmartArray.
 // Use method equals() to compare objects
@@ -24,9 +25,7 @@ public class DistinctDecorator extends SmartArrayDecorator  {
                 idx++;
             }
         }
-        Object[] cleanArr = new Object[idx];
-        System.arraycopy(newArray, 0, cleanArr, 0, idx);
-        return cleanArr;
+        return Arrays.copyOf(newArray, idx);
     }
 
     @Override
