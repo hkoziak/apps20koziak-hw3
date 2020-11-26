@@ -24,7 +24,9 @@ public class DistinctDecorator extends SmartArrayDecorator  {
                 idx++;
             }
         }
-        return newArray.clone();
+        Object[] cleanArr = new Object[idx];
+        System.arraycopy(newArray, 0, cleanArr, 0, idx);
+        return cleanArr;
     }
 
     @Override
@@ -39,7 +41,6 @@ public class DistinctDecorator extends SmartArrayDecorator  {
 
     @Override
     public int size() {
-        Object[] filteredArray = this.toArray();
-        return filteredArray.length;
+        return this.toArray().length;
     }
 }
