@@ -90,6 +90,8 @@ public class SmartArrayApp {
         // Hint: to convert Object[] to String[] - use the following code
         //Object[] result = studentSmartArray.toArray();
         //return Arrays.copyOf(result, result.length, String[].class);
-        return Arrays.copyOf(stArray, stArray.length, String[].class);
+        String[] result = Arrays.copyOf(stArray, stArray.length, String[].class);
+        System.out.println(result);
+        return result;
     }
 }
