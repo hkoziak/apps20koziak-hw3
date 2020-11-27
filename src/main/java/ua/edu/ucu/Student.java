@@ -43,9 +43,9 @@ class Student {
             return false;
         }
         final double MAXDIFF = 0.00001;
-        return Math.abs(this.gpa - ((Student) obj).getGPA()) < MAXDIFF &&
-                this.year == ((Student) obj).getYear() &&
-                this.name.equals(((Student) obj).getName()) &&
-                this.surname.equals(((Student) obj).getSurname());
+        return Math.abs(this.gpa - ((Student) obj).getGPA()) < MAXDIFF
+                    && this.year == ((Student) obj).getYear()
+                    && this.name.equals(((Student) obj).getName())
+                    && this.surname.equals(((Student) obj).getSurname());
         }
 }
