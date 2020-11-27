@@ -15,7 +15,7 @@ public class StudentTest {
         duplicate = new Student(
                 "Ivan", "Petrenko", 10, 5);
         newStudent = new Student(
-                "Ivan", "Petrenko", 10, 4);
+                "Ivan", "Ivanenko", 10, 5);
     }
 
     @Test
